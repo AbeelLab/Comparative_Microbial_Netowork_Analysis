@@ -1,0 +1,49 @@
+Performance Summary:
+           Metric  RF Mean  RF Std  Dummy Mean  Dummy Std
+         F1-Score   0.3685  0.0865      0.2798     0.1215
+        Precision   0.3857  0.1195      0.2807     0.1215
+           Recall   0.3927  0.0892      0.2813     0.1219
+Balanced Accuracy   0.3927  0.0892      0.2813     0.1219
+
+Per-Class Performance:
+Class  F1 Mean (RF)  F1 Std (RF)  Precision Mean (RF)  Precision Std (RF)  Recall Mean (RF)  Recall Std (RF)  F1 Mean (Dummy)  F1 Std (Dummy)
+  AGP        0.4527       0.1428               0.4630              0.1822             0.486           0.1947           0.3000          0.1844
+  CTR        0.4127       0.1671               0.4218              0.1989             0.446           0.2083           0.2522          0.1905
+  PFA        0.2401       0.1886               0.2723              0.2471             0.246           0.2130           0.2871          0.1405
+
+Random Forest Confusion Matrix:
+          Pred AGP  Pred CTR  Pred PFA
+True AGP      2.24      1.16      1.20
+True CTR      1.24      2.08      1.28
+True PFA      1.68      1.64      1.08
+
+Dummy Classifier Confusion Matrix:
+          Pred AGP  Pred CTR  Pred PFA
+True AGP      1.36      1.32      1.92
+True CTR      1.80      1.08      1.72
+True PFA      1.44      1.60      1.36
+
+Accuracy: RF = 0.3971, Dummy = 0.2794, Improvement = 0.1176
+
+Statistical Tests:
+f1_macro t-test: t=3.2273, p=0.0018, Significant: Yes
+precision_macro t-test: t=3.9674, p=0.0003, Significant: Yes
+recall_macro t-test: t=3.9210, p=0.0003, Significant: Yes
+balanced_accuracy t-test: t=3.9210, p=0.0003, Significant: Yes
+
+Per-Class t-tests:
+
+Class AGP:
+  f1: t=3.2945, p=0.0015, Significant: Yes
+  precision: t=3.1965, p=0.0019, Significant: Yes
+  recall: t=3.5657, p=0.0008, Significant: Yes
+
+Class CTR:
+  f1: t=3.3847, p=0.0012, Significant: Yes
+  precision: t=3.1944, p=0.0019, Significant: Yes
+  recall: t=3.8980, p=0.0003, Significant: Yes
+
+Class PFA:
+  f1: t=-1.0558, p=0.8492, Significant: No
+  precision: t=0.0069, p=0.4973, Significant: No
+  recall: t=-1.2000, p=0.8791, Significant: No
